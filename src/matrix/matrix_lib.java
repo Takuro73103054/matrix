@@ -88,10 +88,16 @@ public class matrix_lib {
 		return answer;
 	}
 	
-	/*public double [][] getSolution(double a[][] , double b[][]){
+	public double[] getSolution(double a[][] , double b[]){
+		double answer[] = new double[a.length];
 		double tmp[][] = getInverse(a);
-		double answer[][] = getProduct(tmp,b);
+		for(int i = 0;i < tmp.length; i++) {
+			for(int j = 0; j < tmp.length; j++) {
+				answer[i] += tmp[i][j] * b[j];
+			}
+		}
+		
 		return answer;
-	}*/
+	}
 }
 
